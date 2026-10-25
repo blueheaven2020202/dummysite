@@ -49,7 +49,7 @@ function createGraph(id, data, scale){
 
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded'), () => {
     const cards = [...document.querySelectorAll('main .card')];
     const track = document.getElementById('carouselTrack');
     const counter = document.getElementById('carouselCounter');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let current = 0;
     let timer;
-    let paused = false;
+    let paused = false;}
 
     // 既存のプロフィールから名前と紹介文を取得
     const comedians = cards.map((card, index) => ({

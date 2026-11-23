@@ -256,6 +256,44 @@ img{
     }
 }
 
+.slider-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slide 9s infinite;
+}
+
+.slider-image {
+    width: 33.333%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@keyframes slide {
+    0%, 30% {
+        transform: translateX(0);
+    }
+
+    33%, 63% {
+        transform: translateX(-33.333%);
+    }
+
+    66%, 96% {
+        transform: translateX(-66.666%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 
 .modal {
     display: none;
@@ -519,41 +557,4 @@ footer{
 
 main .card[hidden] {
     display: none !important;
-}
-
-.comedian-card{
-    min-width: 300px;
-    text-align:center;
-    padding: 40px 20px;
-}
-
-.comedian-card-card h2{
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff;
-    white-space:nowrap;
-    margin-bottom: 10px;
-}
-
-.comedian-card p {
-    font-size: 14px;
-    color: #f5c542;
-    letter-spacing: 3px;
-}
-
-* コント師の選択画面を中央に配置 */
-.manzai-carousel {
-    text-align: center;
-}
-
-.manzai-carousel .carousel-stage {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.manzai-carousel .carousel-track {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

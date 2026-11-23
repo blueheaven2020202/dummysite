@@ -49,7 +49,7 @@ function createGraph(id, data, scale){
 
 }
 
-document.addEventListener('DOMContentLoaded'), () => {
+document.addEventListener('DOMContentLoaded', () => {
     const cards = [...document.querySelectorAll('main .card')];
     const track = document.getElementById('carouselTrack');
     const counter = document.getElementById('carouselCounter');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded'), () => {
 
     let current = 0;
     let timer;
-    let paused = false;}
+    let paused = false;
 
     // 既存のプロフィールから名前と紹介文を取得
     const comedians = cards.map((card, index) => ({
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded'), () => {
 
                 button.addEventListener('click', () => {
                     //すべてのコンビのカードを隠す
-                    cards.forEach(card => {
+                    card.forEach(card => {
                         card.hidden = true;
                     });
                     
@@ -207,23 +207,21 @@ document.addEventListener('DOMContentLoaded'), () => {
 
 const backButton = document.getElementById('backToCarousel');
 
-bf (backButton) {
-    backButton.addEventListener('click', () => {
-        cards.forEach(card => {
-            card.hidden = false;
-        });
-
-        backButton.hidden = true;
-
-        document.querySelector('.manzai-carousel')
-            .scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+backButton.addEventListener('click', () => {
+    // すべてのコンビを再表示
+    cards.forEach(card => {
+        card.hidden = false;
     });
-}
 
+    backButton.hidden = true;
 
+    // カルーセルに戻る
+    document.querySelector('.manzai-carousel')
+        .scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+});
 
 render();
 startTimer();
@@ -266,4 +264,4 @@ createGraph("tsukkomiTime",[
     {name:"革命期",value:9.3},
     {name:"変革期",value:7.8},
     {name:"現代期",value:11.6}
-],10)
+],10);

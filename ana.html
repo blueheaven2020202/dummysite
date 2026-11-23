@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分析データ｜漫才の構造</title>
+  <link rel="stylesheet" href="css/analysis.css">
+</head>
+<body>
+
+  <main class="analysis">
+
+    <!--  -->
+    <header class="page-title">
+      <p>ANALYSIS DATA</p>
+      <h1>分析データ</h1>
+      <span>フットボールアワー</span>
+    </header>
+
+    <!-- メルカリ -->
+    <section class="data-cards">
+      <div class="data-card">
+        <span>ネタ時間</span>
+        <strong>5:19</strong>
+      </div>
+
+      <div class="data-card">
+        <span>ボケの数</span>
+        <strong>42回</strong>
+      </div>
+
+      <div class="data-card">
+        <span>ツッコミの数</span>
+        <strong>53回</strong>
+      </div>
+    </section>
+
+    <!-- ボケの発生タイミング -->
+    <section class="panel timeline">
+      <h2>01｜ボケの発生タイミング</h2>
+      <div id="boke-timeline"></div>
+    </section>
+
+    <!-- 比較と分析 -->
+    <div class="analysis-bottom">
+
+      <section class="panel comparison">
+        <h2>02｜時代別データとの比較</h2>
+        <div id="comparison-chart"></div>
+      </section>
+
+      <section class="panel findings">
+        <h2>03｜分析から分かったこと</h2>
+
+        <div class="finding">
+          <strong>01　ボケの量が多い</strong>
+          <p>ネタ全体を通して、多くのボケが展開されています。</p>
+        </div>
+
+        <div class="finding">
+          <strong>02　掛け合いのバランス</strong>
+          <p>ボケとツッコミの掛け合いに注目します。</p>
+        </div>
+
+        <div class="finding">
+          <strong>03　現代的な漫才のスタイル</strong>
+          <p>ボケの頻度や間隔からテンポを分析します。</p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- まとめ -->
+    <footer class="summary">
+      データから見えてきた漫才の特徴をまとめます。
+    </footer>
+
+  </main>
+
+  <script src="js/analysis.js"></script>
+</body>
+</html>
